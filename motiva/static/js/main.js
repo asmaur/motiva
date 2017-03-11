@@ -106,7 +106,7 @@
 Jquery Mobile menu link 
 -----------------------------------*/
   $('nav#dropdown').meanmenu({
-    siteLogo: "<a href='index.html'><img src='/static/img/mobile-logo.png' /></a>"
+    siteLogo: "<a href='index.html'><img src='/static/img/logo.jpg' /></a>"
   });  
 /*---------------------------
  Counter Up
