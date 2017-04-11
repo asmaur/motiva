@@ -247,6 +247,7 @@ accordion
 /*-------------------------------------
 Contact Form activation code
 -------------------------------------*/
+/*
 if($('#contact-form').length){
     $('#contact-form').validator().on('submit', function (e) {
          var $this = $(this),
@@ -279,7 +280,7 @@ if($('#contact-form').length){
          return false;
        }
     });
-  }
+  } */
    
   /*-------------------------------------
   Jquery Fixed Header Menu 

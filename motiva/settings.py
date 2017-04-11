@@ -25,7 +25,7 @@ SECRET_KEY = '$bo(w$8hs95cg3$iql(*uovz6*trdy87r)-=x_c^!k60u1nb+w'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -132,3 +132,9 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'motiva', 'static'),
 )
 SITE_ID = 1
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'contatomotivagym@gmail.com'
+EMAIL_HOST_PASSWORD = 'L0uk@mente123'

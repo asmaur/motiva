@@ -1,11 +1,14 @@
 
 {% extends "gym/base.html" %}
 {% load staticfiles %}
-
-{% block title %} Sobre {% endblock %}
+     
+       
+{% block title %} Contato {% endblock %}
 
 {% block content %}
-
+ 
+ <script src="{% static "js/vendor/jquery-1.11.3.min.js" %}"></script>
+ 
             <!-- Start Inner Banner area -->
             <div class="inner-banner-area">
                 <div class="container">
@@ -29,16 +32,26 @@
                     <div class="row">
                         <div class="col-lg-5 col-md-5 col-sm-5">
                             <form class="form-horizontal contact-form" id='contact-form' role="form">
+                                {% csrf_token %}
                             <fieldset>
 
                             <!-- Form Name -->
-                            <legend>Contact  Form</legend>
+                            <legend>Contato</legend>
 
                             <!-- Text input-->
                             <div class="form-group">
                                 <label class="control-label pull-left" for="textinput1"><i class="fa fa-user" aria-hidden="true"></i></label> 
                                 <div class="media-body">
                                     <input id="form-name" name="textinput" placeholder="Nome" class="form-control input-md" type="text" data-error="Favor entrar seu nome" required>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <label class="control-label pull-left" for="textinput2"><i class="fa fa-envelope-square" aria-hidden="true"></i></label>  
+                                <div class="media-body">
+                                    <input id="form-subject" name="textinput" placeholder="Assunto" class="form-control input-md" type="text" data-error="Favor entrar o assunto" required>
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
@@ -56,7 +69,7 @@
                             <div class="form-group">
                                 <label class="control-label pull-left" for="textinput3"><i class="fa fa-phone" aria-hidden="true"></i></label>
                                 <div class="media-body">
-                                    <input id="form-phone" name="textinput" placeholder="Phone" class="form-control input-md" type="text" data-error="Favor entrar seu telefone" required>
+                                    <input id="form-phone" maxlength="15" onkeypress="mascara(this)" name="textinput" placeholder="Phone" class="form-control input-md" type="text" data-error="Favor entrar seu telefone" required>
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
@@ -73,7 +86,7 @@
                             <!-- Button -->
                             <div class="form-group send-button">
                               <div class="media-body">
-                                <button type="submit" class="btn-read-more-fill btn-send">Send Message</button>
+                                <button type="submit" class="btn-read-more-fill btn-send">Enviar Mensagem</button>
                               </div>
                             </div>
                             <div class='form-response'></div>
@@ -90,8 +103,19 @@
             </div>
             <!-- End Contact page area -->
             
+<script>
+function mascara(telefone){ 
+   if(telefone.value.length == 0)
+     telefone.value = '(' + telefone.value; //quando começamos a digitar, o script irá inserir um parênteses no começo do campo.
+   if(telefone.value.length == 3)
+      telefone.value = telefone.value + ') '; //quando o campo já tiver 3 caracteres (um parênteses e 2 números) o script irá inserir mais um parênteses, fechando assim o código de área.
+ 
+ if(telefone.value.length == 10)
+     telefone.value = telefone.value + '-'; //quando o campo já tiver 8 caracteres, o script irá inserir um tracinho, para melhor visualização do telefone.
+  
+}
+</script>
 
 
-        
 
 {% endblock %}

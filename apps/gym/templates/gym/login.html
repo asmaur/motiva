@@ -1,0 +1,30 @@
+
+<div id="login-modal" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true" class="modal fade">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" data-dismiss="modal" aria-hidden="true" class="close">×</button>
+            <h4 id="Login" class="modal-title">login</h4>
+          </div>
+          <div class="modal-body">
+            <form id="logForm">
+            {% csrf_token %}
+            <div id="mess" style="display:none; ">
+              <p style="color: red;"><strong>Email e senha não correspondem</strong></p>
+            </div>
+              <div class="form-group">
+                <input id="email" type="email" placeholder="email" class="form-control" required="true">
+              </div>
+              <div class="form-group">
+                <input id="password" type="password" placeholder="password" class="form-control" required="true">
+              </div>
+              <p class="text-center">
+                <button type="submit" class="btn btn-primary"><i class="fa fa-sign-in"></i> Entrar</button>
+              </p>
+            </form>
+            <p class="text-center text-muted"><small><a href="/conta/trocar/">Recuperar senha</a></small></p>
+            <p class="text-center text-muted"><a href="/conta/registro/"><strong>Cadastre-se</strong></a>! É simples, é fácil !</p>
+          </div>
+        </div>
+      </div>
+    </div>

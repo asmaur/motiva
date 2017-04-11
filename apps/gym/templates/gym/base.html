@@ -72,6 +72,10 @@
         <!-- modernizr JS
         ============================================ -->
         <script src="{% static "js/vendor/modernizr-2.8.3.min.js" %}"></script>
+        
+         <!-- core CSS of SnackbarJS, find it in /dist -->
+        <link href="{% static "css/snackbar/snackbar.min.css" %}" rel=stylesheet>
+    
     </head>
     <body>
         <!-- Start wrapper -->
@@ -366,7 +370,7 @@
                         <div class="row">
                             <div class="col-lg-3 col-md-3 col-sm-6">
                                 <div class="about-company">
-                                    <h3>About Company</h3>
+                                    <h3>Sobre a Empresa</h3>
                                     <p>Praesent vel rutrum purus. Nam vel dui eu risus duis dignissim dignissim. Suspen disse at eros tempus, congueconsequat.Fusce sit amet urna feugiat.Praesent vel rutrum purus. Nam vel dui eu risus.</p>
                                     <div class="social-icons">
                                         <ul class="social-link">
@@ -394,7 +398,7 @@
                             </div>
                             <div class="col-lg-3 col-md-3 col-sm-6">
                                 <div class="twitter-area">
-                                    <h3>Twitter Feed</h3>
+                                    <h3>Postes do Twitter</h3>
                                     <div class="twitter-list">
                                         <ul>
                                             <li>
@@ -413,7 +417,7 @@
                             </div>
                             <div class="col-lg-3 col-md-3 col-sm-6">
                                 <div class="flickr-photos">
-                                    <h3>Flickr Photos</h3>
+                                    <h3>Photos do Flickr </h3>
                                     <div class="flickr-list">
                                         <ul>
                                             <li><a class="fancybox" href="{% static "img/flickr/flickr1.png" %}" data-fancybox-group="flickr" title="flickr1"><img src="{% static "img/flickr/flickr1.png" %}" alt="flickr1"></a></li>
@@ -428,13 +432,13 @@
                             </div>
                             <div class="col-lg-3 col-md-3 col-sm-6">
                                 <div class="corporate-office">
-                                    <h3>Corporate Office</h3>
+                                    <h3>Endereço da Empresa</h3>
                                     <div class="corporate-address">
                                         <ul>
-                                            <li><i class="fa fa-send" aria-hidden="true"></i>44 New Design Street, rne 005</li>
-                                            <li><i class="fa fa-phone" aria-hidden="true"></i>(01) 800 433 633</li>
-                                            <li><i class="fa fa-envelope-o" aria-hidden="true"></i>info@gymedge.com</li>
-                                            <li><i class="fa fa-fax" aria-hidden="true"></i>Fax : (123) 4657890</li>
+                                            <li><i class="fa fa-send" aria-hidden="true"></i>Av. da Cavalhada, 5005,</br> Porto Alegre - RS </br> CEP: 91751-831</li>
+                                            <li><i class="fa fa-phone" aria-hidden="true"></i>(51) 3245-3109</li>
+                                            <li><i class="fa fa-envelope-o" aria-hidden="true"></i>contatomotivagym@gmail.com</li>
+                                         <!--   <li><i class="fa fa-fax" aria-hidden="true"></i>Fax : (123) 4657890</li> -->
                                         </ul>
                                     </div>
                                 </div>
@@ -449,7 +453,7 @@
                         <div class="row">
                             <div class="col-lg-9 col-md-9 col-sm-9">
                                 <div class="copy-right">
-                                    <p>© Copyrights  gymedge 2016. All rights reserved. Designed by<a href="https://www.radiustheme.com/"> RadiusTheme</a></p>
+                                    <p>© Copyrights  Motiva GYM 2017. Todos os direitos reservados<a href="#"> WB Tech.</a></p>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-3 col-sm-3">
@@ -530,6 +534,15 @@
          <!-- main JS
         ============================================ -->
         <script src="{% static "js/main.js" %}"></script> 
+        
+        <!-- SnackbarJS, find it in /dist -->
+        <script src="{% static "js/snackbar/snackbar.min.js" %}"></script>
+        
+        <!-- Mensagem -->
+        <script src="{% static "js/custom/mensagem.js" %}"></script>
+        
+        <!-- fone mask -->
+        
 
     </body>
 </html>
