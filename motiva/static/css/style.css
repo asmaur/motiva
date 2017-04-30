@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:300,400,500,700');
 /*=======================================================
 
-Template Name: Gymedge 
+Template Name: Gymedge
 Template URI: http://radiustheme.com
 Description: This is html5 template
 Author: radiustheme
@@ -1828,15 +1828,15 @@ blockquote {
 }
 .slider-content .big-title {
   display: inline;
-  font-size: 72px;
+  font-size: 80px;
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
-  color: #ffffff;
+  color: #FFF;
   text-align: center;
   text-transform: uppercase;
 }
 .slider-content .big-title span {
-  color: #fb5b21;
+  //color: ; //#fb5b21;
 }
 .slider-content .small-content {
   color: #e9e9e9;
@@ -2143,7 +2143,7 @@ blockquote {
   text-align: right;
 }
 .about-fitness-left .about-left-img {
-  background: #fb5b21;
+  background: #606060; //#fb5b21;
   position: relative;
   transition: all 0.3s ease 0s;
 }
@@ -2168,7 +2168,7 @@ blockquote {
 }
 .about-fitness-left .about-left-img:after {
   display: block;
-  background: #fb5b21;
+  background: #606060; //#fb5b21;
   position: absolute;
   content: "";
   right: -16px;
@@ -2956,7 +2956,7 @@ a.sign-button:hover {
   margin-bottom: 60px;
 }
 .class-schedule-wrap {
-  background: #fb5b21;
+  background: #606060; //#fb5b21;
   padding: 65px 50px;
 }
 .class-schedule-wrap ul.nav-tabs {
@@ -2972,7 +2972,7 @@ a.sign-button:hover {
   margin: 0;
 }
 .class-schedule-wrap .nav-tabs li a {
-  background: #dd4813;
+  background: #606060; //#dd4813;
   border: none;
   border-radius: 30px;
   color: #ffffff;
@@ -2999,7 +2999,7 @@ a.sign-button:hover {
   padding: 15px 0 15px 10px;
 }
 .class-schedule-tab ul.odd {
-  background: #ed541d;
+  background: #606060; //#ed541d;
   border-radius: 35px;
 }
 .class-schedule-tab ul.even {
