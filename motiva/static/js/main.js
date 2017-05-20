@@ -103,23 +103,7 @@
   });
 
 
-  /*---------------------------
-   Scroll to div
-   ----------------------------*/
-    $(window).scroll(function(){
-      if ($(this).scrollItem() > 100) {
-        $('.scrollToItem').fadeIn();
-      } else {
-        $('.scrollToItem').fadeOut();
-      }
-    });
-
-    //Click event to scroll to top
-    $('.scrollToItem').on('click',function(){
-      $('html, body').animate({scrollItem : 0},800);
-      return false;
-    });
-
+  
 
 /*-------------------------------------
 Jquery Mobile menu link
