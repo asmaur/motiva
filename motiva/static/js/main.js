@@ -1,13 +1,13 @@
 (function ($) {
-    "use strict"; 
+    "use strict";
 
   /*-------------------------------------
   jquery Nav Scroll activation code
-  -------------------------------------*/ 
+  -------------------------------------*/
  /* $('#nav').onePageNav({
       scrollOffset: 80
   });*/
-  
+
   /*-------------------------------------
    Carousel slider initiation
    -------------------------------------*/
@@ -95,19 +95,38 @@
       $('.scrollToTop').fadeOut();
     }
   });
-  
+
   //Click event to scroll to top
   $('.scrollToTop').on('click',function(){
     $('html, body').animate({scrollTop : 0},800);
     return false;
   });
 
+
+  /*---------------------------
+   Scroll to div
+   ----------------------------*/
+    $(window).scroll(function(){
+      if ($(this).scrollItem() > 100) {
+        $('.scrollToItem').fadeIn();
+      } else {
+        $('.scrollToItem').fadeOut();
+      }
+    });
+
+    //Click event to scroll to top
+    $('.scrollToItem').on('click',function(){
+      $('html, body').animate({scrollItem : 0},800);
+      return false;
+    });
+
+
 /*-------------------------------------
-Jquery Mobile menu link 
+Jquery Mobile menu link
 -----------------------------------*/
   $('nav#dropdown').meanmenu({
     siteLogo: "<a href='index.html'><img src='/static/img/logo.jpg' /></a>"
-  });  
+  });
 /*---------------------------
  Counter Up
  ----------------------------*/
@@ -157,7 +176,7 @@ $(function () {
     });
     $('.spinner .btn:last-of-type').on('click', function() {
     $('.spinner input').val( parseInt($('.spinner input').val(), 10) - 1);
-  }); 
+  });
 
 /*-------------------------------------
   jQuery Search Box customization
@@ -171,7 +190,7 @@ $(function () {
       v.addClass('active');
     }
     return false;
-  }); 
+  });
 
 /*-------------------------------------
   jQuery for isotope initialization
@@ -185,10 +204,10 @@ $(function () {
               easing: 'linear',
               queue: false
           }
-      });     
+      });
       $('.isotop-classes-tab a').on('click',function(){
           $('.isotop-classes-tab .current').removeClass('current');
-          $(this).addClass('current');     
+          $(this).addClass('current');
           var selector = $(this).attr('data-filter');
           $container.isotope({
               filter: selector,
@@ -199,7 +218,7 @@ $(function () {
               }
            });
            return false;
-      }); 
+      });
   });
 
 /*-------------------------------------
@@ -281,9 +300,9 @@ if($('#contact-form').length){
        }
     });
   } */
-   
+
   /*-------------------------------------
-  Jquery Fixed Header Menu 
+  Jquery Fixed Header Menu
   -----------------------------------*/
     $(window).scroll(function() {
       var s = $("#sticker"),
@@ -308,7 +327,7 @@ if($('#contact-form').length){
                 }
             }else{
               topBarH = 1;
-            }            
+            }
           if (windowpos >= topBarH) {
               s.addClass('stick');
               if (type === "h4" || type === "h3" || type === "h2") {
